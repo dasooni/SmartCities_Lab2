@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SmartCitiesLab1</string>
+    <string name="action_settings">Settings</string>
+    <string name="GPS_text">GPS Information</string>
+    <string name="Lat">Latitude</string>
+    <string name="Lon">Longitude</string>
+    <string name="Speed">Speed</string>
+    <string name="Heading">Heading</string>
+    <string name="Accuracy">Accuracy</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="mode">Mode</string>
+    <string name="convex">Convex hull</string>
+    <string name="convex_hull">Convex hull</string>
+    <string name="time_interval">Time interval</string>
+    <string name="transparency">Transparency</string>
+    <string name="date_interval">Days</string>
+    <string-array name="modes">
+        <item>Nothing</item>
+        <item>Dots</item>
+        <item>Lines</item>
+        <item>Heatmap</item>
+    </string-array>
+</resources>

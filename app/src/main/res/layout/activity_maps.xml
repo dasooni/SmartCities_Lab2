@@ -1,0 +1,198 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        tools:context="com.example.smartcities.smartcitiesgps.MapsActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:entries="@array/modes"/>
+
+        <CheckBox
+            android:text="@string/convex_hull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/time_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewSeekbar" />
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:id="@+id/textViewMinTime" />
+
+        <TextView
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:id="@+id/textViewMaxTime" />
+
+        <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+            android:id="@+id/rangeSeekbarTimeLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:corner_radius="10"
+            app:min_value="1"
+            app:max_value="24"
+            app:steps="1"
+            app:bar_color="#8990C4"
+            app:bar_highlight_color="#2434AD"
+            app:left_thumb_color="#1A246D"
+            app:left_thumb_color_pressed="#030B47"
+            app:data_type="_integer"/>
+
+    </LinearLayout>
+
+    <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+        android:id="@+id/rangeSeekbarTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:corner_radius="10"
+        app:min_value="0"
+        app:max_value="23"
+        app:bar_color="#8990C4"
+        app:bar_highlight_color="#2434AD"
+        app:left_thumb_color="#1A246D"
+        app:left_thumb_color_pressed="#030B47"
+        app:data_type="_integer"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/date_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewSeekbarDate" />
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:id="@+id/textViewMinDate" />
+
+        <TextView
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewMaxDate" />
+
+        <TextView
+            android:text="(0 total days)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:id="@+id/textViewMaxDates" />
+
+    </LinearLayout>
+
+    <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+        android:id="@+id/rangeSeekbarDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:corner_radius="10"
+        app:min_value="1"
+        app:max_value="10"
+        app:bar_color="#8990C4"
+        app:bar_highlight_color="#2434AD"
+        app:left_thumb_color="#1A246D"
+        app:right_thumb_color="#1A246D"
+        app:left_thumb_color_pressed="#030B47"
+        app:right_thumb_color_pressed="#030B47"
+        app:data_type="_integer"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/transparency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewSeekbarTransparency" />
+
+        <TextView
+            android:text="100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:id="@+id/textViewTransparency" />
+
+        <TextView
+            android:text="%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+        android:id="@+id/rangeSeekbarTransparency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:corner_radius="10"
+        app:min_value="5"
+        app:max_value="100"
+        app:min_start_value="100"
+        app:max_start_value="100"
+        app:steps="5"
+        app:bar_color="#8990C4"
+        app:bar_highlight_color="#2434AD"
+        app:left_thumb_color="#1A246D"
+        app:left_thumb_color_pressed="#030B47"
+        app:data_type="_integer"/>
+
+</LinearLayout>
